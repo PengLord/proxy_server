@@ -1,0 +1,5 @@
+db: admin:mypass@(127.0.0.1:3306)/study?charset=utf8&parseTime=True&loc=Local
+proxyurl: http://192.168.31.53:8080/third_party/proxies
+validtime: 3
+amqurl: amqp: amqp://admin:mypass@192.168.31.53:5672
+queuename: turing:domain:region
