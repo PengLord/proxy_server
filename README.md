@@ -33,14 +33,18 @@
 ### 代理IP以及质量维护
 
 **数据库表结构**
+
 proxy_pools
+
 | 字段         | 类型        | 特殊      | 描述                        |
-| ------------ | ----------- | --------- | --------------------------- |
-| id           | varchar(20) | 主键      | 通过代理(proxy字段)sha1生成 |
-| proxy        | varchar(10) | Not Null  | 代理IP                      |
+| ------------ | ----------- | --------- | --------------------------|
+| id           | varchar(20) | 主键      | 通过代理(proxy字段)sha1生成   |
+| proxy        | varchar(10) | Not Null  | 代理IP                     |
 | is_long_time | int(1)      | default=0 | default(0)短效，=1长效      |
 | is_cn        | int(1)      | default=0 | default(0)是国内，=1国外    |
 | created_at        | int      |  | 创建时间  |
+
+
 **业务流程**
 
 ![avatar](/Users/yunbaoma/Desktop/代理池IP模块流程.jpeg)
@@ -76,16 +80,20 @@ domain=xxx.com
 ### 域名管理计划
 **数据库表结构**
 domains
+
+
 | 字段         | 类型        | 特殊      | 描述                        |
-| ------------ | ----------- | --------- | --------------------------- |
+| ------------ | ----------- | --------- | -------------------------|
 | id           |int | 主键      | 自增 |
-| domain        | varchar(20) | Not Null  | 域名                |
+| domain        | varchar(20) | Not Null  | 域名                     |
 | is_cn        | int(1)      | default=0 | default(0)是国内，=1国外    |
-| created_at        | int      |  | 创建时间  |
+| created_at        | int      |  | 创建时间                          |
+
+
 
 **消息队列**
 
-`turing:domain:region`
+`domain:region`
 
 **流程图**
 
